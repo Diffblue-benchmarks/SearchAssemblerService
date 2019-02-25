@@ -70,7 +70,8 @@ public class SearchAssemblyController {
 		String Url = productAssemblyApiUrl + "P22200535";
 		String jsonInString = restTemplate.getForObject(Url, String.class);
 		System.out.println(jsonInString);
-		enrichService.insertProductDetails(jsonInString);
+		enrichService.createFullFeed(jsonInString);
+		
 		return jsonInString;
 	}
 

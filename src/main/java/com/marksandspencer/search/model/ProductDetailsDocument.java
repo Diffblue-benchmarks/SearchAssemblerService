@@ -1,16 +1,20 @@
 /**
  * 
  */
-package com.marksandspencer.search.dto;
+package com.marksandspencer.search.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 /**
  * @author 1574935
  *
  */
-
+@NoArgsConstructor
+@AllArgsConstructor
 @Document(collection="productdetails")
 public class ProductDetailsDocument {
 
@@ -21,11 +25,10 @@ public class ProductDetailsDocument {
 	private String timeStamp;
 	
 	
-	 public ProductDetailsDocument(String productId,String Contents) {
-	        this.productId = productId;
-	        this.productData = Contents;
-	    }
-	 
+	/*
+	 * public ProductDetailsDocument(String productId,String Contents) {
+	 * this.productId = productId; this.productData = Contents; }
+	 */
 
 	public String getProductId() {
 		return productId;
