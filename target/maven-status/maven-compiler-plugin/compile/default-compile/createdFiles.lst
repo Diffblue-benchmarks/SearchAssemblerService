@@ -1,0 +1,13 @@
+com\marksandspencer\search\util\CSVUtils.class
+com\marksandspencer\search\config\PropertyConfig$ProdConfig.class
+com\marksandspencer\search\service\EnrichService.class
+com\marksandspencer\search\config\PropertyConfig.class
+com\marksandspencer\search\Application.class
+com\marksandspencer\search\controller\SearchAssemblyController.class
+com\marksandspencer\search\repository\ProductDetailsRepository.class
+com\marksandspencer\search\dto\ProductIdDto.class
+com\marksandspencer\search\util\SearchUtil.class
+com\marksandspencer\search\dto\ProductDetailsDocument.class
+com\marksandspencer\search\config\PropertyConfig$LocalConfig.class
+com\marksandspencer\search\config\PropertyConfig$StageConfig.class
+com\marksandspencer\search\config\PropertyConfig$TestConfig.class
