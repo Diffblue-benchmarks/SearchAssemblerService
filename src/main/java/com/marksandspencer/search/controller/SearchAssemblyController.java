@@ -46,8 +46,8 @@ public class SearchAssemblyController {
 	public ResponseEntity<List<ProductIdDto>> getProductIds() {
 		ProductIdDto dto = new ProductIdDto();
 		ProductIdDto dto1 = new ProductIdDto();
-		dto.setId("001");
-		dto1.setId("012");
+		dto.setId("P20026490");
+		dto1.setId("P60184113");
 		List<ProductIdDto> productList = new ArrayList<ProductIdDto>();
 		productList.add(dto);
 		productList.add(dto1);
@@ -63,15 +63,18 @@ public class SearchAssemblyController {
 	@RequestMapping(method = RequestMethod.GET, value = "/create/fullfeed")
 
 	public String getProductList() {
-
 		List<ProductIdDto> productList = new ArrayList<ProductIdDto>();
-		// dummy Enriched API to get product Id
 		productList = restTemplate.getForObject(enrichProductApiUrl, List.class);
-		String Url = productAssemblyApiUrl + "P22200535";
-		String jsonInString = restTemplate.getForObject(Url, String.class);
-		System.out.println(jsonInString);
-		enrichService.createFullFeed(jsonInString);
+		String jsonInString=null;
+		// dummy Enriched API to get product Id
+	//	for(ProductIdDto id : productList) {
 		
+			String Url = productAssemblyApiUrl + "P20026490";
+			jsonInString = restTemplate.getForObject(Url, String.class);
+			enrichService.insertProductDetails(jsonInString,"P20026490" );
+	//	}
+		enrichService.createFullFeed();
+
 		return jsonInString;
 	}
 
